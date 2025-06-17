@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "csfloat": {
+      "command": "C:/Users/User/OneDrive/Ambiente de Trabalho/mcp/.venv/Scripts/python.exe",
+      "args": ["C:/Users/User/OneDrive/Ambiente de Trabalho/mcp/csfloat_server.py"]
+    }
+  }
+}
