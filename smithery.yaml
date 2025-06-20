@@ -1,0 +1,23 @@
+# Smithery configuration file: https://smithery.ai/docs/build/project-config
+
+startCommand:
+  type: stdio
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({
+      command: 'python',
+      args: ['csfloat_server.py'],
+      env: { CSFLOAT_API_KEY: config.csfloatApiKey }
+    })
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - csfloatApiKey
+    properties:
+      csfloatApiKey:
+        type: string
+        description: CSFloat API key for authentication
+  exampleConfig:
+    csfloatApiKey: YOUR_API_KEY_HERE
